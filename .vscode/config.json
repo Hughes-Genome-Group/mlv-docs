@@ -1,0 +1,9 @@
+{
+    "restructuredtext.builtDocumentationPath" : "${workspaceRoot}/_build/html",
+    "restructuredtext.confPath"               : "${workspaceRoot}",
+    "restructuredtext.updateOnTextChanged"    : "true",
+    "restructuredtext.updateDelay"            : 300,
+    "restructuredtext.sphinxBuildPath" :"C:\\Users\\martin\\Envs\\mlv\\Scripts",
+    "restructuredtext.preview.scrollEditorWithPreview": false,
+    "restructuredtext.preview.scrollPreviewWithEditor": false
+ }

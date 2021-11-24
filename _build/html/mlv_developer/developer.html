@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,10 +33,12 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/fa-5.5.0/all.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Multi Locus View" href="../multi_locus_view/multi_locus_view.html" /> 
+    <link rel="prev" title="Combat MLV" href="../combat/combat-mlv.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,9 +82,10 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../multi_locus_view/multi_locus_view.html">Multi Locus View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../combat/combat-mlv.html">Combat MLV</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installing-the-application">Installing the Application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#clone-from-git">Clone from Git</a></li>
@@ -256,14 +259,14 @@ export VIRTUALENVWRAPPER_PYHTON=/usr/bin/python3.6
 <h3>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>The following  programs need to installed and avialable in the path:-</p>
 <ul class="simple">
-<li>tabix and bgzip (<a class="reference external" href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>)</li>
-<li>rabbitmq-server (<a class="reference external" href="https://www.rabbitmq.com/download.html">https://www.rabbitmq.com/download.html</a>)</li>
-<li>bedtools (<a class="reference external" href="https://github.com/arq5x/bedtools2/releases">https://github.com/arq5x/bedtools2/releases</a>)</li>
-<li>bedToBigBed,bigBedToBed and bigWigInfo (<a class="reference external" href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a>)</li>
-<li>nodejs (<a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>)</li>
-<li>nodejs modules najax, jquery,xhr2,extend and canvas</li>
-<li>NGINX (<a class="reference external" href="https://www.nginx.com/">https://www.nginx.com/</a>) or another http server (for production)</li>
-<li>PostgreSQL 9.5 or above (<a class="reference external" href="https://www.postgresql.org/">https://www.postgresql.org/</a>)</li>
+<li><p>tabix and bgzip (<a class="reference external" href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>)</p></li>
+<li><p>rabbitmq-server (<a class="reference external" href="https://www.rabbitmq.com/download.html">https://www.rabbitmq.com/download.html</a>)</p></li>
+<li><p>bedtools (<a class="reference external" href="https://github.com/arq5x/bedtools2/releases">https://github.com/arq5x/bedtools2/releases</a>)</p></li>
+<li><p>bedToBigBed,bigBedToBed and bigWigInfo (<a class="reference external" href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a>)</p></li>
+<li><p>nodejs (<a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>)</p></li>
+<li><p>nodejs modules najax, jquery,xhr2,extend and canvas</p></li>
+<li><p>NGINX (<a class="reference external" href="https://www.nginx.com/">https://www.nginx.com/</a>) or another http server (for production)</p></li>
+<li><p>PostgreSQL 9.5 or above (<a class="reference external" href="https://www.postgresql.org/">https://www.postgresql.org/</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="creating-the-database">
@@ -435,55 +438,55 @@ variables which may need to be changed.</p>
 <div class="section" id="database-settings">
 <h3>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>DB_HOST</strong> The database host, either a server name or an IP address. By default, the environment variable DB_HOST will be used or localhost if it is not set.</li>
-<li><strong>DB_USER</strong> The name of the database user, mlv by default.</li>
-<li><strong>SYSTEM_DATABASE</strong> The name of the system/user database, mlv_user by default.</li>
-<li><strong>DB_PASS</strong> The database password, set to the environment variable DATABASE_PASS by default (passwords shouldn’t be stored in the config)</li>
+<li><p><strong>DB_HOST</strong> The database host, either a server name or an IP address. By default, the environment variable DB_HOST will be used or localhost if it is not set.</p></li>
+<li><p><strong>DB_USER</strong> The name of the database user, mlv by default.</p></li>
+<li><p><strong>SYSTEM_DATABASE</strong> The name of the system/user database, mlv_user by default.</p></li>
+<li><p><strong>DB_PASS</strong> The database password, set to the environment variable DATABASE_PASS by default (passwords shouldn’t be stored in the config)</p></li>
 </ul>
 </div>
 <div class="section" id="folder-locations">
 <h3>Folder Locations<a class="headerlink" href="#folder-locations" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>DATA_FOLDER</strong> The location to store all the data, can be a mapped drive</li>
-<li><strong>TEMP_FOLDER</strong> The location to store temporary data. Data here can be deleted</li>
-<li><strong>TRACKS_FOLDER</strong> The location to store and serve genome tracks (BigWigs,BigBed files etc)</li>
+<li><p><strong>DATA_FOLDER</strong> The location to store all the data, can be a mapped drive</p></li>
+<li><p><strong>TEMP_FOLDER</strong> The location to store temporary data. Data here can be deleted</p></li>
+<li><p><strong>TRACKS_FOLDER</strong> The location to store and serve genome tracks (BigWigs,BigBed files etc)</p></li>
 </ul>
 </div>
 <div class="section" id="message-queue-celery-settings">
 <h3>Message Queue (Celery) Settings<a class="headerlink" href="#message-queue-celery-settings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>BROKER_URL</strong> The message queue url. By default is the localhost but potentially it could be a different server</li>
-<li><strong>USE_CELERY</strong> The default is True, only set to False when debugging</li>
+<li><p><strong>BROKER_URL</strong> The message queue url. By default is the localhost but potentially it could be a different server</p></li>
+<li><p><strong>USE_CELERY</strong> The default is True, only set to False when debugging</p></li>
 </ul>
 </div>
 <div class="section" id="app-settings">
 <h3>App Settings<a class="headerlink" href="#app-settings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>HOME_PAGE</strong> the url of the home page of the application</li>
-<li><strong>HOST_NAME</strong> the name of the machine hosting the app</li>
-<li><strong>APPLICATION_NAME</strong> The name of the application</li>
-<li><strong>APPLICATION_LOGO</strong> The url of the application logo</li>
-<li><strong>MODULES</strong> A list of modules to load. [“multi_locus_view”] by default</li>
+<li><p><strong>HOME_PAGE</strong> the url of the home page of the application</p></li>
+<li><p><strong>HOST_NAME</strong> the name of the machine hosting the app</p></li>
+<li><p><strong>APPLICATION_NAME</strong> The name of the application</p></li>
+<li><p><strong>APPLICATION_LOGO</strong> The url of the application logo</p></li>
+<li><p><strong>MODULES</strong> A list of modules to load. [“multi_locus_view”] by default</p></li>
 </ul>
 </div>
 <div class="section" id="email-settings">
 <h3>Email Settings<a class="headerlink" href="#email-settings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>MAIL_SERVER</strong> The email server, smtp.gmail.com by default</li>
-<li><strong>MAIL_PORT</strong>  The email server port, 587 by default</li>
-<li><strong>MAIL_USE_SSL</strong>  False by default</li>
-<li><strong>MAIL_USE_TLS</strong>  True by default</li>
-<li><strong>MAIL_USERNAME</strong>  The mail username . The dummy entry <a class="reference external" href="mailto:mlv&#37;&#52;&#48;gmail&#46;com">mlv<span>&#64;</span>gmail<span>&#46;</span>com</a> is the default.</li>
-<li><strong>MAIL_PASSWORD</strong>  password by default</li>
-<li><strong>HELP_EMAIL_RECIPIENTS</strong> A list of email addresees to which user questions are sent (an empty list bt default)</li>
-<li><strong>MAIL_DEFAULT_SENDER</strong> The name to attach to emails that are sent out. ‘The MLV Team’ by default.</li>
+<li><p><strong>MAIL_SERVER</strong> The email server, smtp.gmail.com by default</p></li>
+<li><p><strong>MAIL_PORT</strong>  The email server port, 587 by default</p></li>
+<li><p><strong>MAIL_USE_SSL</strong>  False by default</p></li>
+<li><p><strong>MAIL_USE_TLS</strong>  True by default</p></li>
+<li><p><strong>MAIL_USERNAME</strong>  The mail username . The dummy entry <a class="reference external" href="mailto:mlv&#37;&#52;&#48;gmail&#46;com">mlv<span>&#64;</span>gmail<span>&#46;</span>com</a> is the default.</p></li>
+<li><p><strong>MAIL_PASSWORD</strong>  password by default</p></li>
+<li><p><strong>HELP_EMAIL_RECIPIENTS</strong> A list of email addresees to which user questions are sent (an empty list bt default)</p></li>
+<li><p><strong>MAIL_DEFAULT_SENDER</strong> The name to attach to emails that are sent out. ‘The MLV Team’ by default.</p></li>
 </ul>
 </div>
 <div class="section" id="misc-setting">
 <h3>Misc. Setting<a class="headerlink" href="#misc-setting" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>SECRET_KEY</strong> Enables secure password hashing, should be sent to large random string</li>
-<li><strong>JS_VERSION</strong> Should be changed each time a new version is rolled out as this will cause existing js and css caches on the user’s computers to be refreshed.</li>
+<li><p><strong>SECRET_KEY</strong> Enables secure password hashing, should be sent to large random string</p></li>
+<li><p><strong>JS_VERSION</strong> Should be changed each time a new version is rolled out as this will cause existing js and css caches on the user’s computers to be refreshed.</p></li>
 </ul>
 </div>
 </div>
@@ -522,7 +525,7 @@ export DATABASE_PASS=&quot;pword&quot;
 <h4>create_new_genome_database<a class="headerlink" href="#create-new-genome-database" title="Permalink to this headline">¶</a></h4>
 <p>creates a new empty genome database.</p>
 <ul class="simple">
-<li><em>- -db_name</em> - The name of the database</li>
+<li><p><em>- -db_name</em> - The name of the database</p></li>
 </ul>
 </div>
 <div class="section" id="add-new-genome">
@@ -531,26 +534,26 @@ export DATABASE_PASS=&quot;pword&quot;
 chromosome file will automatically be added. Oterwise, the chromosome file (tab delimited chromosome to length) can be added manually to
 <em>data_root/&lt;genome_name&gt;/&lt;genome_name&gt;/chrom.sizes</em>.</p>
 <ul class="simple">
-<li><em>- -name</em> - The name of the database (required)</li>
-<li><em>- -label</em> - The label e.g. Human(hg19) (required)</li>
-<li><em>- -icon</em> - The url of an icon to represent the database (24px x 24px). If not supplied a default icon will be used</li>
-<li><em>- -database</em> - The name of the database to store the genome in (required)</li>
-<li><em>- -connections</em> - The numner of connections optional - default 5</li>
+<li><p><em>- -name</em> - The name of the database (required)</p></li>
+<li><p><em>- -label</em> - The label e.g. Human(hg19) (required)</p></li>
+<li><p><em>- -icon</em> - The url of an icon to represent the database (24px x 24px). If not supplied a default icon will be used</p></li>
+<li><p><em>- -database</em> - The name of the database to store the genome in (required)</p></li>
+<li><p><em>- -connections</em> - The numner of connections optional - default 5</p></li>
 </ul>
 </div>
 <div class="section" id="run-app">
 <h4>run_app<a class="headerlink" href="#run-app" title="Permalink to this headline">¶</a></h4>
 <p>Runs the app on the local host.</p>
 <ul class="simple">
-<li><em>- -port</em> - The port</li>
+<li><p><em>- -port</em> - The port</p></li>
 </ul>
 </div>
 <div class="section" id="runcelery">
 <h4>runcelery<a class="headerlink" href="#runcelery" title="Permalink to this headline">¶</a></h4>
 <p>Runs the message queue</p>
 <ul class="simple">
-<li><em>- -queue</em> - The name of the queue . the default is celery, the other oprion is slow_queue</li>
-<li><em>- -threads</em> - The number of threads to give the queue - optional (default is 3)</li>
+<li><p><em>- -queue</em> - The name of the queue . the default is celery, the other oprion is slow_queue</p></li>
+<li><p><em>- -threads</em> - The number of threads to give the queue - optional (default is 3)</p></li>
 </ul>
 </div>
 <div class="section" id="remove-deleted-projects">
@@ -568,11 +571,11 @@ frequent time intervals e.g. in crontab</p>
 <h4>find_or_create_user<a class="headerlink" href="#find-or-create-user" title="Permalink to this headline">¶</a></h4>
 <p>Manually adds a user to the database</p>
 <ul class="simple">
-<li><em>- -first_name</em> - The user’s first name (required)</li>
-<li><em>- -last_name</em> - The user’s last name(required)</li>
-<li><em>- -email</em> - The user’s email(required)</li>
-<li><em>- -password</em> - The user’s password (required)</li>
-<li><em>- -admin</em> - If True,true or TRUE,the user will habe admin rights (default False)</li>
+<li><p><em>- -first_name</em> - The user’s first name (required)</p></li>
+<li><p><em>- -last_name</em> - The user’s last name(required)</p></li>
+<li><p><em>- -email</em> - The user’s email(required)</p></li>
+<li><p><em>- -password</em> - The user’s password (required)</p></li>
+<li><p><em>- -admin</em> - If True,true or TRUE,the user will habe admin rights (default False)</p></li>
 </ul>
 </div>
 </div>
@@ -669,15 +672,15 @@ the system database.</p>
 <p>Each project needs to described by an entry in the project’s list of a module’s config.
 The config should contain the following:-</p>
 <ul class="simple">
-<li><strong>name</strong> - The name of the project type (that will be stored in the database as type)</li>
-<li><strong>label</strong> - The name shown to user.</li>
-<li><strong>large_icon</strong> -  The url of the icon which is displayed in the panels on the main page.</li>
-<li><strong>can_create</strong> If True then this type of project can be directly created from the home page.</li>
-<li><strong>description</strong> A short description which is displayed in the create panel on the main page.</li>
-<li><strong>is_public</strong> If False, then the user must have the permission ‘view_project_type’ with the value of the project’s type.</li>
-<li><strong>main_project</strong> If True, then individual projects of this type will be accessible to view from the home page.</li>
-<li><strong>enter_genome</strong> (optional) - If True then the genome can entered during the initial creation page, usually only name and description can be entered.</li>
-<li><strong>anonymous_create</strong> (optional) If True, then projects of this type can be created by an anonymous user that is not logged in.</li>
+<li><p><strong>name</strong> - The name of the project type (that will be stored in the database as type)</p></li>
+<li><p><strong>label</strong> - The name shown to user.</p></li>
+<li><p><strong>large_icon</strong> -  The url of the icon which is displayed in the panels on the main page.</p></li>
+<li><p><strong>can_create</strong> If True then this type of project can be directly created from the home page.</p></li>
+<li><p><strong>description</strong> A short description which is displayed in the create panel on the main page.</p></li>
+<li><p><strong>is_public</strong> If False, then the user must have the permission ‘view_project_type’ with the value of the project’s type.</p></li>
+<li><p><strong>main_project</strong> If True, then individual projects of this type will be accessible to view from the home page.</p></li>
+<li><p><strong>enter_genome</strong> (optional) - If True then the genome can entered during the initial creation page, usually only name and description can be entered.</p></li>
+<li><p><strong>anonymous_create</strong> (optional) If True, then projects of this type can be created by an anonymous user that is not logged in.</p></li>
 </ul>
 <p>Users have to be given a specific permission to create a project If the project type is public,
 new users will automatically get permission to create that project type.</p>
@@ -713,10 +716,10 @@ actual template file should be located at</p>
 calls the project’s get_template method. The template is then rendered with the following kwargs
 (plus any extra returned by the get_template method)</p>
 <ul class="simple">
-<li>project_id</li>
-<li>project_type</li>
-<li>project_name</li>
-<li>project_description</li>
+<li><p>project_id</p></li>
+<li><p>project_type</p></li>
+<li><p>project_name</p></li>
+<li><p>project_description</p></li>
 </ul>
 <p>The project’s <em>get_template</em> method receives the args from the request and should return the location of the template
 and a dictionary containing any key word arguments (in addition to the above) required by the template. Different
@@ -760,25 +763,23 @@ should be updated with the class name</p>
 <p>To expose a project’s method to an HTML Client use the static member ‘methods’, which is a dictionary with
 the exposed method as the key and a dictionary containing the following parameters:-</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>permission</strong>  required, either view or edit</dt>
-<dd><ul class="first last">
-<li>view - allow all users with view permission to access the method. This will include all users if the object is public</li>
-<li>edit - allow only users with edit permission to access the method</li>
+<li><dl class="simple">
+<dt><strong>permission</strong>  required, either view or edit</dt><dd><ul>
+<li><p>view - allow all users with view permission to access the method. This will include all users if the object is public</p></li>
+<li><p>edit - allow only users with edit permission to access the method</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><strong>async</strong>  optional, either True or False (False by default)</dt>
-<dd><ul class="first last">
-<li>False - The method will be run in the browser thread</li>
-<li>True - The method will be processed asynchronously</li>
+<li><dl class="simple">
+<dt><strong>async</strong>  optional, either True or False (False by default)</dt><dd><ul>
+<li><p>False - The method will be run in the browser thread</p></li>
+<li><p>True - The method will be processed asynchronously</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><strong>running_flag</strong> optional, The projects’s data will have this parameter set to the supplied value immediately before the method is sent to any queue. Should be a list containing the parameter and value to set</li>
+<li><p><strong>running_flag</strong> optional, The projects’s data will have this parameter set to the supplied value immediately before the method is sent to any queue. Should be a list containing the parameter and value to set</p></li>
 </ul>
 <p>As an example a project <em>new_project</em> with a single method <em>get_data</em> that can be accessed by all users
 (including anonymous ones) would be written as follows:-</p>
@@ -925,15 +926,15 @@ the status is ‘failed’.</p>
 <p>Job objects have the instance variable ‘job’, which is just an SQLAlchemy object referring to the database entry.
 This can be manipulated directly or there are the following convenience methods:-</p>
 <ul class="simple">
-<li><strong>complete</strong> Sets date finished and status fields in the database</li>
-<li><strong>has_permission(user)</strong> Returns whether the user has permission for this job</li>
-<li><strong>set_input_parameter(param,value)</strong> Sets the input parameter</li>
-<li><strong>set_output_parameter(param,value)</strong> Sets the output parameter</li>
-<li><strong>get_input_parameter(param,value)</strong> Gets the input parameter</li>
-<li><strong>get_output_parameter(param,value)</strong> Gets the output parameter</li>
-<li><strong>get_user_name()</strong> Gets the full name of the job’s owner</li>
-<li><strong>set_status(self,value)</strong> Sets the status in the database</li>
-<li><strong>get_info()</strong> Returns a dictionary containing the job’s inputs and outputs</li>
+<li><p><strong>complete</strong> Sets date finished and status fields in the database</p></li>
+<li><p><strong>has_permission(user)</strong> Returns whether the user has permission for this job</p></li>
+<li><p><strong>set_input_parameter(param,value)</strong> Sets the input parameter</p></li>
+<li><p><strong>set_output_parameter(param,value)</strong> Sets the output parameter</p></li>
+<li><p><strong>get_input_parameter(param,value)</strong> Gets the input parameter</p></li>
+<li><p><strong>get_output_parameter(param,value)</strong> Gets the output parameter</p></li>
+<li><p><strong>get_user_name()</strong> Gets the full name of the job’s owner</p></li>
+<li><p><strong>set_status(self,value)</strong> Sets the status in the database</p></li>
+<li><p><strong>get_info()</strong> Returns a dictionary containing the job’s inputs and outputs</p></li>
 </ul>
 </div>
 </div>
@@ -948,7 +949,7 @@ This can be manipulated directly or there are the following convenience methods:
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../multi_locus_view/multi_locus_view.html" class="btn btn-neutral float-left" title="Multi Locus View" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../combat/combat-mlv.html" class="btn btn-neutral float-left" title="Combat MLV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

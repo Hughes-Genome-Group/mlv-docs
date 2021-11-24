@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Combat MLV &mdash; MLV  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fa-5.5.0/all.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MLV Developer Documentation" href="../mlv_developer/developer.html" />
+    <link rel="prev" title="Multi Locus View" href="../multi_locus_view/multi_locus_view.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MLV
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../multi_locus_view/multi_locus_view.html">Multi Locus View</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Combat MLV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#left-hand-summary-panel">Left Hand (Summary) Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#loading-data">Loading Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-gene-protein-data">Loading Gene/Protein data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heat-maps">Heat Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hallmarks">Hallmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-type-dendogram">Cell Type Dendogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#right-hand-feature-panel">Right Hand (Feature) Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changing-filters">Changing Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-new-charts">Adding New Charts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-the-view">Saving the View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mlv_developer/developer.html">Developer Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MLV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Combat MLV</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/combat/combat-mlv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="combat-mlv">
+<span id="id1"></span><h1>Combat MLV<a class="headerlink" href="#combat-mlv" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Combat MLV is  built on top of <a class="reference external" href="https://mlv.molbiol.ox.ac.uk">MLV</a> but instead of simultaneously viewing multiple genome locations, it allows the visualization of multiple experimental observations from the same samples as produced by the COMBAT project. The vast quantity and disparate types of data that has been generated by the COMBAT project creates many challenges to visualizing the data as a whole. For example, some experiments us|ed bulk tissue, whereas others used single cell techniques. In addition, gene expression, protein abundance. percentage cell types are quite different types of  measurements, having different properties such as scales and thus are difficult to compare. There is also a lot of missing data with a relatively small number of samples having measurements from all modalities. To address these issues the following was implemented in COMBAT-MLV:-</p>
+<ul class="simple">
+<li><p>Data from single cell experiments (modalities) is collapsed to sample/tissue (pseudobulk) to allow comparison with bulk experiments</p></li>
+<li><p>Data has been binned into percentile bins so each feature will have a relative value from 1 to 10, which allows easy comparison between modalities. However raw data is also available if required</p></li>
+<li><p>Gene/proteins have been matched between modalities so bulk/single cell gene expression can be compared to protein measurements (Luminex/Mass Spectrometry)</p></li>
+<li><p>There are many filters that can be applied to the data so that depending on which modalities are being viewed the amount of missing data is kept to a minimum in each view</p></li>
+</ul>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the context of COMBAT-MLV, an item of data is known as a feature and is comprised of the following five levels:</p>
+<blockquote>
+<div><p><strong>Modality(Cluster Level)| (Cluster) | datatype |name</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Modality</strong> The actual experiment e.g., CITE-seq GEX, RNA-seq, CYTOF</p></li>
+<li><p><strong>Cluster Level</strong> The level at which single cell data has been collapsed e.g major/minor cell type (not present in bulk modalities)</p></li>
+<li><p><strong>Cluster</strong>  The actual cluster e.g. cell type (not present in bulk modalities)</p></li>
+<li><p><strong>DataType</strong> The type of data e.g. raw counts, reads per million, percentile bins</p></li>
+<li><p><strong>Name</strong> The actual name of the feature bing measured e.g gene/protein, % cell type</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<img alt="alternate text" class="align-center" src="../_images/summary.png" />
+<p>Specific views can be created by searching for genes/proteins or selecting data from different modalities or loading specific hallmarks. Predefined views can be accessed from the main <a class="reference external" href="https://mlv.combat.ox.ac.uk/home">home page</a> or from a clickable <a class="reference external" href="https://mlv.combat.ox.ac.uk/summary">summary figure</a>
+There are two panels in the display. The right-hand panel displays summary of the data  heat maps (one per modality) as well as hallmarks. The left hand panel displays individual ‘features’</p>
+<img alt="alternate text" class="align-center" src="../_images/left-right-panel.png" />
+</div>
+<div class="section" id="left-hand-summary-panel">
+<h2>Left Hand (Summary) Panel<a class="headerlink" href="#left-hand-summary-panel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="loading-data">
+<h3>Loading Data<a class="headerlink" href="#loading-data" title="Permalink to this headline">¶</a></h3>
+<p>The load data button brings up four choices</p>
+<ul class="simple">
+<li><p><i class='fas fa-list'></i> Paste Gene List - (see) Allows you to type to paste gene names and will try and find matches is in each modality. The genes will then be shown in a heatmap</p></li>
+<li><p><i class='fas fa-list-alt'></i> Load Hallmark  - loads a text box with a list of distinguishing feature</p></li>
+<li><p><i class='fas fa-database'></i> Load other data types - Load data sets from modalities that are nor protein/gene based such as % cell types</p></li>
+<li><p><i class='fas fa-code-branch'></i> Load Dendogram - Loads data that can be displayed hierarchically. At the moment the only option is the cell designation hierarchy derived from the CITE-seq Data</p></li>
+</ul>
+</div>
+<div class="section" id="loading-gene-protein-data">
+<h3>Loading Gene/Protein data<a class="headerlink" href="#loading-gene-protein-data" title="Permalink to this headline">¶</a></h3>
+<img alt="alternate text" class="align-center" src="../_images/gene_search.png" />
+<p>Clicking on Load Data &gt; Paste Gene list will bring up the Gene and Protein Selection dialog. Gene names (or EMBL Ids) need to be typed or pasted in the text box and the the the Find button (2) clicked. After a short search any modality containing data for the gene or corresponding protein will be shown in the main table. Modalities (columns) can be removed by un-checking the appropriate check box (4). Genes (rows) can be removed with the bin icon (3) or individual gene/modalities can be unchecked. Pressing the submit button will load in all the requested data and display appropriate summary heat maps (one per modality)</p>
+</div>
+<div class="section" id="heat-maps">
+<h3>Heat Maps<a class="headerlink" href="#heat-maps" title="Permalink to this headline">¶</a></h3>
+<img alt="alternate text" class="align-center" src="../_images/left-panel.png" />
+<p>Heat maps can show a range of data . The samples on the x axis are  grouped into categories (initially source) . This can be changed with the source dropdown (2), the choices available depend on which data has been loaded into the right hand panel. For a continuous field categories are split into four equal bins spanning the data range. The heatmap can be collapsed into the displayed categories , whereby an average is shown instead of each individual sample, by using the collapse button (3). Depending on which which modality the heatmap is showing, there will be a number of options in the title bar. For single cell modalities, the cluster level (4) and cluster i.e. cell type (5) can be changed. For all heatmaps, the type of data can be changed (6). Which types are available depends on the modality , but clicking on the dropdown will give you options and explanations about each type. The rows can be re-clustered at any time by clicking the cluster icon (7)</p>
+<p>Data can be transferred to the right hand panel by clicking on the x axis labels and that feature will then be transferred across and a box plot will be shown. The data will be whatever cluster/cluster level and data type is currently being displayed in the heat map. The feature can then be combined with other features or sample associated data in a range of charts. For single cell data a heatmap consisting of expression for all cell types of the currently selected cluster level will also be added to the left-hand panel</p>
+</div>
+<div class="section" id="hallmarks">
+<h3>Hallmarks<a class="headerlink" href="#hallmarks" title="Permalink to this headline">¶</a></h3>
+<img alt="alternate text" class="align-center" src="../_images/hallmark.png" />
+<p>Hallmarks show Features which have been shown to differentiate between COVID-19 and Sepsis/Flu or between the different severities of COVID-19 infection. By clicking on a feature in the hallmark will load it into the right hand panel and generate a box plot of that feature</p>
+</div>
+<div class="section" id="cell-type-dendogram">
+<h3>Cell Type Dendogram<a class="headerlink" href="#cell-type-dendogram" title="Permalink to this headline">¶</a></h3>
+<img alt="alternate text" class="align-center" src="../_images/dendogram.png" />
+<p>This shows the three hierarchical cell type composition derived  from the CITE-seq gene expression analysis. Panning and zooming can be achieved with dragging the mouse and using the mouse wheel respectively. Clicking on a white circle (cell type) will load data for that cell type into left hand panel. The number of levels can be altered by clicking on the cog icon and changing the level in the dialog which appears.</p>
+</div>
+</div>
+<div class="section" id="right-hand-feature-panel">
+<h2>Right Hand (Feature) Panel<a class="headerlink" href="#right-hand-feature-panel" title="Permalink to this headline">¶</a></h2>
+<img alt="alternate text" class="align-center" src="../_images/right-panel.png" />
+<p>This panel shows individual feature and other data associated with samples. By default, row charts the sample’s source and the modality is shown. A sample can have data from more then one modality  To load sample associated data, click on he Get Data button (1)  and you can then select from a range of available fields.</p>
+<div class="section" id="changing-filters">
+<h3>Changing Filters<a class="headerlink" href="#changing-filters" title="Permalink to this headline">¶</a></h3>
+<p>The current filter (4) is displayed and can be changed with the Choose Filter button . The current number of samples and the total are are displayed on the right (8) . Changing the filter will update all the charts and the heatmaps to reflect the currently filtered samples. A Filter can also be applied (on top the selected base filter) by clicking on category in a row/pie chart or selecting a range/area in a histogram/scatter plot. Clicking the reset button on a chart will then remove that chart’s filter</p>
+</div>
+<div class="section" id="adding-new-charts">
+<h3>Adding New Charts<a class="headerlink" href="#adding-new-charts" title="Permalink to this headline">¶</a></h3>
+<p>New Charts for any of the current fields can be added with the Add chart button (6) This will bring up a dialog where you select the type of chart and fields to be used in the chart . The type of charts  are</p>
+<ul class="simple">
+<li><p><strong>scatterplot</strong> - two continuous fields can be plotted against each other</p></li>
+<li><p><strong>boxplot</strong> - a continuous field can be chosen for the y axis e.g. a feature and discrete field to the x axis e.g source</p></li>
+<li><p><strong>histogram</strong> - the distribution of  continuous field  is displayed</p></li>
+<li><p><strong>row chart/pie chart</strong> the categories in a discrete field are displayed</p></li>
+</ul>
+</div>
+<div class="section" id="saving-the-view">
+<h3>Saving the View<a class="headerlink" href="#saving-the-view" title="Permalink to this headline">¶</a></h3>
+<p>Saving the view will save all the loaded data, current filter and charts.  To achieve this  click on the save button (7). If you do not own the view you can select ‘save as’, which will clone the current view and save it under a different name. You can also share the view with another user or make it public. The url will always point to this link or you can access it from my projects in the top nav bar</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mlv_developer/developer.html" class="btn btn-neutral float-right" title="MLV Developer Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../multi_locus_view/multi_locus_view.html" class="btn btn-neutral float-left" title="Multi Locus View" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Martin Sergeant
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

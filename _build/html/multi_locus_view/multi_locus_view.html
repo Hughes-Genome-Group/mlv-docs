@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,10 +33,12 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/fa-5.5.0/all.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MLV Developer Documentation" href="../mlv_developer/developer.html" />
+    <link rel="next" title="Combat MLV" href="../combat/combat-mlv.html" />
     <link rel="prev" title="Welcome to MLV’s documentation!" href="../index.html" /> 
 </head>
 
@@ -81,7 +83,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Multi Locus View</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
@@ -154,6 +156,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../combat/combat-mlv.html">Combat MLV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mlv_developer/developer.html">Developer Documentation</a></li>
 </ul>
 
@@ -319,11 +322,11 @@ The graph changes to only include those datapints in the current filter. No Sele
 <p>Initially only two tracks will be displayed, the genomic locations you uploaded and if you didn’t select ‘other’ for the genome, a track is displaying the genes. Other tracks can be added with the  ‘Add Tracks’ button (2), which shows a dialog where you need to enter the url of a publically accessible track. The hosting server of the track should allow Cross Origin Resource Sharing (CORS). The type of track will try and be ascertained based on the url, although you can manually overide this by clicking on one of the radio buttons</p>
 <p>Tracks that can be added are:-</p>
 <ul class="simple">
-<li>bed(tabix) - A bed file that has been gzipped and indexed with tabix</li>
-<li>BigBed</li>
-<li>BigWig</li>
-<li>Bam - A bam index is also required</li>
-<li>UCSC session - either cut and paste the url from the UCSC browser or use a session url. The latter will be more stable as the former uses a temporary id, which is only valid for a short period.</li>
+<li><p>bed(tabix) - A bed file that has been gzipped and indexed with tabix</p></li>
+<li><p>BigBed</p></li>
+<li><p>BigWig</p></li>
+<li><p>Bam - A bam index is also required</p></li>
+<li><p>UCSC session - either cut and paste the url from the UCSC browser or use a session url. The latter will be more stable as the former uses a temporary id, which is only valid for a short period.</p></li>
 </ul>
 </div>
 <div class="section" id="altering-track-appearance">
@@ -336,11 +339,11 @@ according to the type of track. The track height can be altered from this dialog
 <p>There are five ways you can navigate using the browser:-</p>
 <blockquote>
 <div><ul class="simple">
-<li>You can zoom in and out using the mouse wheel and scroll left and right by deagging the mouse</li>
-<li>Use shift and drag to highlight and zoom into a region on the browser</li>
-<li>Use the magnifying glass icons (4), the zoom amount can be controlled by the adjacent spinner (5)</li>
-<li>Type the location co-ordinates (chr:&lt;start&gt;-&lt;stop&gt;) in the location text box (6)</li>
-<li>Click on a row or image in the right hand table to go to that feature. The margin spinner (1) shows how many bp  either side of the feature will be displayed.</li>
+<li><p>You can zoom in and out using the mouse wheel and scroll left and right by deagging the mouse</p></li>
+<li><p>Use shift and drag to highlight and zoom into a region on the browser</p></li>
+<li><p>Use the magnifying glass icons (4), the zoom amount can be controlled by the adjacent spinner (5)</p></li>
+<li><p>Type the location co-ordinates (chr:&lt;start&gt;-&lt;stop&gt;) in the location text box (6)</p></li>
+<li><p>Click on a row or image in the right hand table to go to that feature. The margin spinner (1) shows how many bp  either side of the feature will be displayed.</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -349,11 +352,11 @@ according to the type of track. The track height can be altered from this dialog
 <p>This shows the uploaded regions(features) displayed in the right hand table. Clicking on the settings <i class='fas fa-cog'></i> icon (7) will bring up a dialog where the following can be adjsuted:-</p>
 <blockquote>
 <div><ul class="simple">
-<li>Set the field you wish to a label the features with</li>
-<li>Set the field to color the feature by</li>
-<li>Set the field with which to position the feature on the y axis. By default the feature layout depends on the layout (Collapsed, expanded or squished)
-but can be a numeric field</li>
-<li>Choose the margins (distance either side of the feature) that will be displayed when you click on an image or a row in thr table</li>
+<li><p>Set the field you wish to a label the features with</p></li>
+<li><p>Set the field to color the feature by</p></li>
+<li><p>Set the field with which to position the feature on the y axis. By default the feature layout depends on the layout (Collapsed, expanded or squished)
+but can be a numeric field</p></li>
+<li><p>Choose the margins (distance either side of the feature) that will be displayed when you click on an image or a row in thr table</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -409,10 +412,10 @@ Also in image mode you can alter image size using the slider in the table menu a
 <p>Analysis jobs are run in the background on the server and the results, in the form of tracks, graphs and extra columns in the table are added to the project once the job is complete.
 The following types of analysis are possible:-</p>
 <ul class="simple">
-<li><i class='fas fa-stream'></i> <strong>Annotation Intersection</strong> - calculates whether each location overlaps a set of annotations or locations from another project.</li>
-<li><i class='fas fa-exchange-alt'></i> <strong>Find TSS Distances</strong> - calculates whether each location overlaps a Transcription Start Site (TSS) and if not, the distance to nearest site, either upstream (+) or downstream (-).</li>
-<li><i class='fas fa-signature'></i> <strong>Calculate Peak Stats</strong> - calculates the area and max height of the signal from a bigWig file at at each location in the project.</li>
-<li><i class='fab fa-cloudsmith'></i> <strong>Cluster on Columns</strong> - carries out dimension reduction (UMAP,tSNE) on any number of given columns in the project.</li>
+<li><p><i class='fas fa-stream'></i> <strong>Annotation Intersection</strong> - calculates whether each location overlaps a set of annotations or locations from another project.</p></li>
+<li><p><i class='fas fa-exchange-alt'></i> <strong>Find TSS Distances</strong> - calculates whether each location overlaps a Transcription Start Site (TSS) and if not, the distance to nearest site, either upstream (+) or downstream (-).</p></li>
+<li><p><i class='fas fa-signature'></i> <strong>Calculate Peak Stats</strong> - calculates the area and max height of the signal from a bigWig file at at each location in the project.</p></li>
+<li><p><i class='fab fa-cloudsmith'></i> <strong>Cluster on Columns</strong> - carries out dimension reduction (UMAP,tSNE) on any number of given columns in the project.</p></li>
 </ul>
 <p>Jobs are run in the background and can be viewed on thr ‘My Jobs’ page (link in the top navigation bar) or in the history dialog (<i class='fas fa-history'></i>), which will automatically open when you send a job.
 You do not need to stay on the page whilst jobs are running, although if you do when the job is finished, you will be notified and the appropriate results loaded in.</p>
@@ -447,10 +450,10 @@ If you include GO annotations, you can choose upto which hierarchical level you 
 <p>Once the job has run four columns will be added to the table</p>
 <blockquote>
 <div><ul class="simple">
-<li>TSS distance -  the distance to the nearset TSS, + being upstream and - downstream</li>
-<li>Gene ID - the Genbank gene id of the nearest gene</li>
-<li>Gene Name - the common name of the nearest gene</li>
-<li>Ovelaps TSS - either TRUE or FALSE depending on whether the region overlaps the TSS</li>
+<li><p>TSS distance -  the distance to the nearset TSS, + being upstream and - downstream</p></li>
+<li><p>Gene ID - the Genbank gene id of the nearest gene</p></li>
+<li><p>Gene Name - the common name of the nearest gene</p></li>
+<li><p>Ovelaps TSS - either TRUE or FALSE depending on whether the region overlaps the TSS</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -554,7 +557,7 @@ Another application, <a class="reference external" href="https://lanceotron.molb
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mlv_developer/developer.html" class="btn btn-neutral float-right" title="MLV Developer Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../combat/combat-mlv.html" class="btn btn-neutral float-right" title="Combat MLV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to MLV’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
